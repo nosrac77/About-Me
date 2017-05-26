@@ -1,15 +1,23 @@
+body {
+  background-image: url(http://wallpaper-gallery.net/images/minimalistic-wallpapers/minimalistic-wallpapers-3.jpg);
+  background-size: cover;
+}
+
 h1 {
-  background-color: green;
+  font-display: block;
+  text-align: center;
+  font-family: 'Alex Brush';font-size: 60px;
 }
 
-p {
-  border: 5px solid black;
+#opening-paragraph {
+  font-family: 'Allerta Stencil';font-size: 35px;
+  color: #31033B;
 }
 
-.page-content {
-  background-color: red;
+.questions {
+
 }
 
-#unique-p-tag {
-  background-color: blue;
+.answers {
+  
 }
