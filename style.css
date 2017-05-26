@@ -6,12 +6,13 @@ body {
 h1 {
   font-display: block;
   text-align: center;
-  font-family: 'Alex Brush';font-size: 60px;
+  font-family: 'Alex Brush';font-size: 80px;
 }
 
 #opening-paragraph {
   font-family: 'Allerta Stencil';font-size: 35px;
   color: #31033B;
+  text-align: center;
 }
 
 .questions {
@@ -19,5 +20,9 @@ h1 {
 }
 
 .answers {
+
+}
+
+#questions-and-answers {
   
 }
