@@ -49,3 +49,5 @@ if (question4 === 'N'){
 } else {
   alert('Tried to get wise on me huh?! I told ya not to! That\'s a big fail, my friend.');
 }
+
+//add script to input the user's name, so that as the prompts go on they're specific to the user. Incorporate these changes in the console.log statements as well, and make consol.logs more specific. Yes, this will take re-writing some code. I know, that kinda blows. Just do it.
