@@ -6,7 +6,7 @@ body {
 h1 {
   font-display: block;
   text-align: center;
-  font-family: 'Alex Brush';font-size: 80px;
+  font-family: 'Alex Brush';font-size: 90px;
 }
 
 #opening-paragraph {
@@ -16,13 +16,13 @@ h1 {
 }
 
 .questions {
-
+  font-family: 'Armata';font-size: 31px;
 }
 
 .answers {
-
+  font-family: 'Armata';font-size: 22px;
 }
 
 #questions-and-answers {
-  
+
 }
