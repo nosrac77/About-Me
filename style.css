@@ -1,6 +1,8 @@
 body {
   background-image: url(http://wallpaper-gallery.net/images/minimalistic-wallpapers/minimalistic-wallpapers-3.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -24,5 +26,6 @@ h1 {
 }
 
 #questions-and-answers {
-
+  background: rgba(175, 175, 175, 0.5);
+  border-radius: 25px;
 }

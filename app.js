@@ -37,3 +37,15 @@ if (question3 === 'N'){
 } else {
   alert('Wow... can\'t type a Y or an N? Too cool for school? Whatever, you get this one wrong for your defiance.');
 }
+
+var question4 = prompt('You\'re being a trooper. Alright, next question (and be careful, this one\'s a bit of a zinger). Is my favorite actor Nick Cage? Also apart of the same question: if so, do I also have a Nick Cage pillow on my bed? Answer Y if you think I love Nick Cage and own a Nick Cage pillow or N to say no to both. And again, just type in Y or N. Don\'t try to get wise on me now.').toUpperCase();
+
+if (question4 === 'N'){
+  console.log('The user is correct. Correct as HELL.');
+  alert('Ah, not even the zingers can throw you huh? A true comrade. We\'d get along swimmingly, I\'m sure. Let\'s hang out and not watch Nick Cage movies.');
+} else if (question4 === 'Y') {
+  console.log('The user is dumb and also hates me.');
+  alert('Ha! I gotcha with a zinger! Although Nick Cage is great (seriously though the man deserves more credit, Raising Arizona is a classic) he\'s certainly not my favorite and I don\'t own a Nick Cage pillow.');
+} else {
+  alert('Tried to get wise on me huh?! I told ya not to! That\'s a big fail, my friend.');
+}
