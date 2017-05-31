@@ -2,7 +2,7 @@
 
 var welcome = alert('Hey there, I see you made your way to my page. Prepare your mind! Five questions I shall ask thee...');
 
-var name = prompt('Wait, first of all who am I speaking with? Enter your name below. Or, ya know, don\'t. Whatever man.');
+var name = prompt('Wait, first of all who am I speaking with? Enter your name below. Or, ya know, don\'t. Might mess a few things up though... ');
 
 if (name) {
   console.log('User has input ' + name + ' as his or her name.');
