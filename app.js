@@ -4,12 +4,14 @@ var welcome = alert('Hey there, I see you made your way to my page. Prepare your
 
 var name = prompt('Wait, first of all who am I speaking with? Enter your name below. Or, ya know, don\'t. Might mess a few things up though... ');
 
+while (!name || name === null) {
+  alert ('Alright, wise guy. Enter a valid name. Ya gotta type something!');
+  var name = prompt('Wait, first of all who am I speaking with? Enter your name below. Or, ya know, don\'t. Stay in this while loop. While you keep misbehaving it\'ll keep the alerts coming (seriously, free yourself by entering something or hitting cancel).');
+}
+
 if (name) {
   console.log('User has input ' + name + ' as his or her name.');
   alert(name + ', huh? Interesting, is that a family name or something? Well alright then ' + name + ', it\'s truly time to begin! This is a guessing game! Can you guess what you\'ll be doing? Answer five questions in Y or N format, but beware!! Invalid inputs can yield rather... dangerous results. Mwahahahaha!');
-} else {
-  console.log('The user has entered an invalid input.');
-  alert('You just had to be a rebel! Not into typing your name, huh? Fine, have it your way! Now the rest of the time there\'s gonna be weird spaces where your name should be.');
 }
 
 var question1 = prompt('Do I have a dog? Answer Y or N to submit a valid response. Like, seriously ' + name + ', don\'t type some random bullshit.').toUpperCase();

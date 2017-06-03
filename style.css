@@ -15,6 +15,7 @@ h1 {
   font-family: 'Allerta Stencil';font-size: 35px;
   color: #31033B;
   text-align: center;
+  margin: 20px;
 }
 
 .questions {
@@ -28,4 +29,36 @@ h1 {
 #questions-and-answers {
   background: rgba(175, 175, 175, 0.5);
   border-radius: 25px;
+}
+
+#top_ten_content {
+  background: rgba(175, 175, 175, 0.5);
+  border-radius: 25px;
+}
+
+#top_ten_opening_paragraph {
+  font-family: 'Armata';font-size: 31px;
+  text-align: center;
+  margin: 20px;
+}
+
+#top_ten_header {
+  font-family: 'Sarpanch';font-size: 60px;
+}
+
+#top_ten_list {
+  font-family: 'Sarpanch';font-size: 45px;
+}
+
+.top_ten_explanations {
+  font-family: 'Armata';font-size: 26px;
+  margin-left: 15px;
+}
+
+li {
+  margin-left: 15px;
+}
+
+#ten {
+  margin-left: 30px;
 }
