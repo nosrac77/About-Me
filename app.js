@@ -79,14 +79,22 @@ console.log(correctNumber);
 
 var attemptsNumbers = 3;
 
-var question6 = prompt('Oh, did I mention that there are actually two more questions? I guess I didn\'t. Well, suprise! Alright ' + name + ', this time you get to do something besides Y or N. I want you to guess my favorite number. It\'s between 1 and 100 and it\'s totally not random. You get four tries. Hell, I\'ll even tell you if your guess too high or too low. Enter your guess below!');
+/*var question6 = prompt('Oh, did I mention that there are actually two more questions? I guess I didn\'t. Well, suprise! Alright ' + name + ', this time you get to do something besides Y or N. I want you to guess my favorite number. It\'s between 1 and 100 and it\'s totally not random. You get four tries. Hell, I\'ll even tell you if your guess too high or too low. Enter your guess below!');
 
 while (!question6) {
   alert('You\'re getting this because you\'re doing some falsey type nonsense. Now you better shape up ' + name + ', the lord is watching.');
   question6 = prompt('Oh, did I mention that there are actually two more questions? I guess I didn\'t. Well, suprise! Alright ' + name + ', this time you get to do something besides Y or N. I want you to guess my favorite number. It\'s between 1 and 100 and it\'s totally not random. You get four tries. Hell, I\'ll even tell you if your guess too high or too low. Enter your guess below! And be sure to type something this time...');
-}
+} */
 
 for (var i = 0; i < 3; i++) {
+
+  var question6 = prompt('Oh, did I mention that there are actually two more questions? I guess I didn\'t. Well, suprise! Alright ' + name + ', this time you get to do something besides Y or N. I want you to guess my favorite number. It\'s between 1 and 100 and it\'s totally not random. You get four tries. Hell, I\'ll even tell you if your guess too high or too low. Enter your guess below!');
+
+  while (!question6) {
+    alert('You\'re getting this because you\'re doing some falsey type nonsense. Now you better shape up ' + name + ', the lord is watching.');
+    question6 = prompt('Oh, did I mention that there are actually two more questions? I guess I didn\'t. Well, suprise! Alright ' + name + ', this time you get to do something besides Y or N. I want you to guess my favorite number. It\'s between 1 and 100 and it\'s totally not random. You get four tries. Hell, I\'ll even tell you if your guess too high or too low. Enter your guess below! And be sure to type something this time...');
+  }
+
   if (question6 < correctNumber) {
     question6 = prompt('Not quite, a bit too low. Come on ' + name + ', YOU GOT THIS.');
     attemptsNumbers --;
@@ -121,10 +129,9 @@ for (i = 0; i < 6; i++) {
     var question7 = prompt('Of all the games in the list below, there are three that I have played more than any of the others. Type in your answer exactly like how you see it typed, and make sure to spell it correctly!\n\nThe Elder Scrolls: Oblivion\nPortal\nSuper Mario World\nBioshock\nZelda: Ocarina of Time/Zelda: Majora\'s Mask\nMega-Man X4\nHalo 3\nFinal Fantasy VII\nKingdom Hearts\nSuper Mario 64');
   }
 
-  if (question7 == favoriteGames[0] || favoriteGames[1] || favoriteGames [2]) {
+  if (question7 == favoriteGames[0] || favoriteGames[1] || favoriteGames[2]) {
     console.log(name + ' guessed the correct answer!');
     favoriteGames.splice(favoriteGames.indexOf(question7), 1);
-    console.log(favoriteGames);
     alert('Nice, you got one! The other correct answers were ' + favoriteGames[0] + ' and ' + favoriteGames[1] + '.');
     break;
   } else {
