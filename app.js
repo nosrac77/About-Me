@@ -4,9 +4,9 @@ var welcome = alert('Hey there, I see you made your way to my page. Prepare your
 
 var name = prompt('Wait, first of all who am I speaking with? Enter your name below. Or, ya know, don\'t. Might mess a few things up though... ');
 
-while (!name || name === null) {
+while (!name) {
   alert ('Alright, wise guy. Enter a valid name. Ya gotta type something!');
-  var name = prompt('Wait, first of all who am I speaking with? Enter your name below. Or, ya know, don\'t. Stay in this while loop. While you keep misbehaving it\'ll keep the alerts coming (seriously, free yourself by entering something or hitting cancel).');
+  name = prompt('Wait, first of all who am I speaking with? Enter your name below. Or, ya know, don\'t. Stay in this while loop. While you keep misbehaving it\'ll keep the alerts coming (seriously, free yourself by entering something or hitting cancel).');
 }
 
 if (name) {
@@ -72,4 +72,64 @@ if (question5 === 'N') {
   alert('Dammit... my name is definitely not Carlton. It\'s Carson... I\'m not gonna lie I feel let down. I\'d say we can still be friends but we can\'t, friends have to know each other\'s names. It\'s probably the one and only actual requirement of friendship. So now we have to part ways... But know this. I\'ll always remember you ' + name + '. ALWAYS.');
 } else {
   alert('You failed ' + name + ', and that cuts deep. But maybe us taking a look at my page together can help us heal. Maybe there\'s... maybe there\'s still time.');
+}
+
+var correctNumber = Math.floor((Math.random() * 100) + 1);
+console.log(correctNumber);
+
+var attemptsNumbers = 3;
+
+var question6 = prompt('Oh, did I mention that there are actually two more questions? I guess I didn\'t. Well, suprise! Alright ' + name + ', this time you get to do something besides Y or N. I want you to guess my favorite number. It\'s between 1 and 100 and it\'s totally not random. You get four tries. Hell, I\'ll even tell you if your guess too high or too low. Enter your guess below!');
+
+while (!question6) {
+  alert('You\'re getting this because you\'re doing some falsey type nonsense. Now you better shape up ' + name + ', the lord is watching.');
+  question6 = prompt('Oh, did I mention that there are actually two more questions? I guess I didn\'t. Well, suprise! Alright ' + name + ', this time you get to do something besides Y or N. I want you to guess my favorite number. It\'s between 1 and 100 and it\'s totally not random. You get four tries. Hell, I\'ll even tell you if your guess too high or too low. Enter your guess below! And be sure to type something this time...');
+}
+
+for (var i = 0; i < 3; i++) {
+  if (question6 < correctNumber) {
+    question6 = prompt('Not quite, a bit too low. Come on ' + name + ', YOU GOT THIS.');
+    attemptsNumbers --;
+    console.log('The user ' + name + ' guessed incorrectly.');
+  } else if (question6 > correctNumber){
+    question6 = prompt('Not quite, too high! Come on ' + name + ', YOU GOT THIS.');
+    attemptsNumbers --;
+    console.log('The user ' + name + ' guessed incorrectly.');
+  } else {
+    alert('Holy shit, you actually guessed that?! How?! Well hey, kudos. I\'m pleasantly surprised. That was a random number and you got it. Nicely done!');
+    console.log('The user' + name + ' somehow guessed this number correctly!');
+    break;
+  }
+}
+
+if (attemptsNumbers === 0) {
+  alert('Ah damn, you didn\'t guess correctly in four attempts. That\'s like a lifetime of tries. It\'s ok though, I think we can still be friends. The right answer was ' + correctNumber + ',  by the way.');
+}
+
+var favoriteGames = ['The Elder Scrolls: Oblivion', 'Halo 3', 'Kingdom Hearts'];
+
+var gamesExplanation = alert('Alright, this is the final question (for realsies this time). On the page you\'re about to see is a list of my top ten favorite video-games of all time. Of every game on that list, there are three that I\'ve played more than any of the others, and you have to guess which ones they are. You have six attempts to guess the correct games. Good luck!');
+
+var attemptsGames = 5;
+
+var question7 = prompt('Of all the games in the list below, there are three that I have played more than any of the others. If you guess one of them, you win. Type in your answer exactly like how you see it typed, and make sure to spell it correctly!\n\nThe Elder Scrolls: Oblivion\nPortal\nSuper Mario World\nBioshock\nZelda: Ocarina of Time/Zelda: Majora\'s Mask\nMega-Man X4\nHalo 3\nFinal Fantasy VII\nKingdom Hearts\nSuper Mario 64');
+
+for (i = 0; i < 6; i++) {
+
+  while (!question7) {
+    alert('I know this seems like a daunting task, believe me. But you have to type something... Type something!');
+    var question7 = prompt('Of all the games in the list below, there are three that I have played more than any of the others. Type in your answer exactly like how you see it typed, and make sure to spell it correctly!\n\nThe Elder Scrolls: Oblivion\nPortal\nSuper Mario World\nBioshock\nZelda: Ocarina of Time/Zelda: Majora\'s Mask\nMega-Man X4\nHalo 3\nFinal Fantasy VII\nKingdom Hearts\nSuper Mario 64');
+  }
+
+  if (question7 == favoriteGames[0] || favoriteGames[1] || favoriteGames [2]) {
+    console.log(name + ' guessed the correct answer!');
+    favoriteGames.splice(favoriteGames.indexOf(question7), 1);
+    console.log(favoriteGames);
+    alert('Nice, you got one! The other correct answers were ' + favoriteGames[0] + ' and ' + favoriteGames[1] + '.');
+    break;
+  } else {
+    attemptsGames --;
+    alert('Nope! I know, this lineup is incredible. Believe me I know they\'re all good, but three are near and dear to my heart!');
+    var question7 = prompt('Which one of the following games have I played more than any of the others? Type in your answer exactly like how you see it typed, and make sure to spell it correctly!\n\nThe Elder Scrolls: Oblivion\nPortal\nSuper Mario World\nBioshock\nZelda: Ocarina of Time/Zelda: Majora\'s Mask\nMega-Man X4\nHalo 3\nFinal Fantasy VII\nKingdom Hearts\nSuper Mario 64');
+  }
 }

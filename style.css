@@ -40,6 +40,7 @@ h1 {
   font-family: 'Armata';font-size: 31px;
   text-align: center;
   margin: 20px;
+  padding: 20px;
 }
 
 #top_ten_header {
@@ -61,4 +62,8 @@ li {
 
 #ten {
   margin-left: 30px;
+}
+
+span {
+  text-decoration: line-through;
 }
