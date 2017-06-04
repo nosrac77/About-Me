@@ -71,3 +71,34 @@ span {
 #favorite_actors_list {
 
 }
+
+#answers {
+  background: rgba(175, 175, 175, 0.5);
+  border-radius: 25px;
+  padding: 5px;
+}
+
+/* find out more button */
+.btn {
+  color: rgba(50, 51, 51, 0.52);
+  padding: 12px 17px;
+  margin-left: 39%;
+  font-family: 'OpenSansBold', sans-serif;
+  border: 3px solid rgba(50, 51, 51, 0.52);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 ##D3D3D3;
+  transition: all ease 0.7s;
+}
+
+/* The beautiful shadow on hover */
+.btn:hover {
+  box-shadow: inset 290px 0 0 0 #efefef;
+}
