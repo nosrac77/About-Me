@@ -20,6 +20,9 @@
       <p id="opening-paragraph">Why hello there! <em>Would you like to play a game</em>? Haha just kidding, I know you were kinda just forced to play one anyway. I hope you enjoyed yourself, friend. Check out the answers below to learn some more stuff about me!</p>
 
       <br></br>
+      <div>
+        <a href="#answers" class="btn">Click to see your answers!</a>
+      </div>
 
       <h3 class="questions">Unlike Adam, no, I don't have a dog.</h3>
         <p class="answers">Instead, I actually have rats. As of May 25th, 2017, I actually have 3 rats. I know you're probably asking "Hey Carson, why don't you have more rats?". That's a valid question. I mean come on, can you ever own too many rats? I've had rats for several years now, and in my completely non-biased opinion they are the best creatures to ever house as pets. They're intelligent and very unique with personalities and quirks that vary from rat to rat. Picture a dog, but way smaller, not as loud, and not at all like a dog now that I think about it... Great pets nonetheless!</p>
@@ -83,6 +86,18 @@
         <p class="top_ten_explanations">This one changed the game!</p>
       </ol>
 
+    </div>
+    <div id="answers">
+      <script type="text/javascript">
+           /* Loop to run the code... Statement 1: initialize the variable used in the loop. Statement 2: Define the condition for running the loop. Statement 3: executed each time after the loop has been executed. Found reference on https://www.w3schools.com/js/js_loop_for.asp Also on page 170 of JS class book*/
+           for (var i = 0; i < db.length; i++) {
+             var obj = db[i];
+             /* Nested loop to go through all keys if I decide to create more */
+             for(key in obj){
+               document.write('<p>' + key + '   Your Answer : ' + obj[key]+ '<br />');
+             }
+           }
+          </script>
     </div>
 
 </body>
