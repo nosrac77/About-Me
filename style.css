@@ -9,6 +9,7 @@ h1 {
   font-display: block;
   text-align: center;
   font-family: 'Alex Brush';font-size: 90px;
+  text-shadow: 3px 3px 2px #39004d;
 }
 
 #opening-paragraph {
@@ -16,6 +17,8 @@ h1 {
   color: #31033B;
   text-align: center;
   margin: 20px;
+  text-shadow: 1px 1px 1px black;
+  te
 }
 
 .questions {
@@ -41,6 +44,7 @@ h1 {
   text-align: center;
   margin: 20px;
   padding: 20px;
+  text-shadow: 1px 1px 1px black;
 }
 
 #top_ten_header {
@@ -69,7 +73,7 @@ span {
 }
 
 #favorite_actors_list {
-
+  font-family: 'Armata';font-size: 26px;
 }
 
 #answers {
@@ -101,4 +105,21 @@ span {
 /* The beautiful shadow on hover */
 .btn:hover {
   box-shadow: inset 290px 0 0 0 #efefef;
+}
+
+.user_answers {
+  text-align: center;
+  font-family: 'Allerta Stencil';font-size: 25px;
+  color: #31033B;
+}
+
+#answers_header {
+  text-align: center;
+  font-family: 'Armata';font-size: 45px;
+}
+
+#user_answers_total {
+  text-align: center;
+  font-family: 'Allerta Stencil';font-size: 55px;
+  color: #31033B;
 }

@@ -2,6 +2,8 @@
 
 var db = [];
 
+var correctUserAnswers = 7;
+
 var welcome = alert('Hey there, I see you made your way to my page. Prepare your mind! Five questions I shall ask thee...');
 
 var name = prompt('Wait, first of all who am I speaking with? Enter your name below. Or, ya know, don\'t. Might mess a few things up though... ');
@@ -27,8 +29,11 @@ function question1Function() {
   } else if (question1 === 'Y') {
     console.log(name + ' is dumb and also hates me.');
     alert('Wow... wrong. Just cuz Adam has a dog we all have dogs? And here I thought we were homies.');
+    correctUserAnswers --;
   } else {
+    console.log(name + ' is dumb and also hates me.');
     alert('Seriously? Even after I said no bullshit? Come on man! Alright, you lose. 0 for 0 so far, happy now?');
+    correctUserAnswers --;
   }
 };
 
@@ -45,8 +50,11 @@ function question2Function() {
   } else if (question2 === 'N') {
     console.log(name + ' is dumb and also hates me.');
     alert('Goodness gracious. That was a lay-up! Come on, wrongy mcwrongface! Look alive!');
+    correctUserAnswers --;
   } else {
+    console.log(name + ' is dumb and also hates me.');
     alert('Dammit. Simple instructions yo, ya gotta follow em! You\'re not doing hot right now.');
+    correctUserAnswers --;
   }
 };
 
@@ -63,8 +71,11 @@ function question3Function() {
   } else if (question3 === 'Y') {
     console.log(name + ' is dumb and also hates me.');
     alert('First answer you\'ve gotten wrong, chump? I honestly don\'t know, this JavaScript isn\'t sophisticated enough to tell! But I\'m willing to bet it isn\'t! Anyway, you\'re wrong!');
+    correctUserAnswers --;
   } else {
+    console.log(name + ' is dumb and also hates me.');
     alert('Wow... can\'t type a Y or an N? Too cool for school? Whatever, you get this one wrong for your defiance.');
+    correctUserAnswers --;
   }
 };
 
@@ -81,8 +92,11 @@ function question4Function() {
   } else if (question4 === 'Y') {
     console.log(name + ' is dumb and also hates me.');
     alert('Ha! I gotcha with a zinger! Although Nick Cage is great (seriously though the man deserves more credit, Raising Arizona is a classic) he\'s certainly not my favorite and I don\'t own a Nick Cage pillow.');
+    correctUserAnswers --;
   } else {
+    console.log(name + ' is dumb and also hates me.');
     alert('Tried to get wise on me huh?! I told ya not to! That\'s a big fail, ' + name + '.');
+    correctUserAnswers --;
   }
 };
 
@@ -95,12 +109,15 @@ function question5Function() {
 
   if (question5 === 'N') {
     console.log(name + ' is correct. Correct as HELL.');
-    alert('CORRECT! YOU DID IT!! Haha ah ' + name + ', I knew you had it in you! Well relax and take a well deserved look at some sweet html and css!');
+    alert('CORRECT! YOU DID IT!! Haha ah ' + name + ', I knew you had it in you!');
   } else if (question5 === 'Y') {
     console.log(name + ' is dumb and also hates me.');
     alert('Dammit... my name is definitely not Carlton. It\'s Carson... I\'m not gonna lie I feel let down. I\'d say we can still be friends but we can\'t, friends have to know each other\'s names. It\'s probably the one and only actual requirement of friendship. So now we have to part ways... But know this. I\'ll always remember you ' + name + '. ALWAYS.');
+    correctUserAnswers --;
   } else {
+    console.log(name + ' is dumb and also hates me.');
     alert('You failed ' + name + ', and that cuts deep. But maybe us taking a look at my page together can help us heal. Maybe there\'s... maybe there\'s still time.');
+    correctUserAnswers --;
   }
 };
 
@@ -109,14 +126,14 @@ question5Function();
 var correctNumber = Math.floor((Math.random() * 100) + 1);
 console.log(correctNumber);
 
-var attemptsNumbers = 4;
-
 function question6Function() {
+
+  var attemptsNumbers = 4;
 
   for (var i = 0; i < 4; i++) {
 
     var question6 = prompt('Oh, did I mention that there are actually two more questions? I guess I didn\'t. Well, suprise! Alright ' + name + ', this time you get to do something besides Y or N. I want you to guess my favorite number. It\'s between 1 and 100 and it\'s totally not random. You get four tries. Hell, I\'ll even tell you if your guess too high or too low. Enter your guess below!');
-    db[5] = {'Guess my favorite number. Your answer was': question6};
+    db[5] = {'Guess my favorite number.': question6};
 
     while (!question6) {
       alert('You\'re getting this because you\'re doing some falsey type nonsense. Now you better shape up ' + name + ', the lord is watching.');
@@ -124,45 +141,39 @@ function question6Function() {
 
     if (question6 < correctNumber) {
       attemptsNumbers --;
-      alert('Not quite, a bit too low. Come on ' + name + ', YOU GOT THIS.');
+      alert('Not quite, a bit too low. Come on ' + name + ', YOU GOT THIS. You have ' + attemptsNumbers + ' attempts left!');
       console.log('The user ' + name + ' guessed incorrectly.');
     } else if (question6 > correctNumber){
       attemptsNumbers --;
-      alert('Not quite, too high! Come on ' + name + ', YOU GOT THIS.');
+      alert('Not quite, too high! Come on ' + name + ', YOU GOT THIS. You have ' + attemptsNumbers + ' attempts left!');
       console.log('The user ' + name + ' guessed incorrectly.');
     } else if (question6 == correctNumber){
       alert('Holy shit, you actually guessed that?! How?! Well hey, kudos. I\'m pleasantly surprised. That was a random number and you got it. Nicely done!');
       console.log('The user' + name + ' somehow guessed this number correctly!');
       break;
-    } else if (attemptsNumbers === 1){
-      attemptsNumbers --;
-      question6 = prompt('Alright, last chance! Guess the right number or you\'re done!');
-    } else if (attemptsNumbers === 0){
-      alert('Looks like you\'re out of attempts!');
-      console.log('The user did not guess the random number correctly!');
     }
   }
 
-  if (attemptsNumbers === 1) {
-    question6 = prompt('Alright, last chance! Guess the right number or you\'re done!');
+  if (attemptsNumbers == 0) {
+    correctUserAnswers --;
+    alert('Ah damn, you were probably so close. The correct answer was ' + correctNumber + '!');
   }
 };
+
 question6Function();
 
 var favoriteGames = ['The Elder Scrolls: Oblivion', 'Halo 3', 'Kingdom Hearts'];
+var incorrectGames = ['Portal', 'Super Mario World', 'Bioshock', 'Zelda: Ocarina of Time/Zelda: Major\'s Mask', 'Mega-Man', 'Final Fantasy VII', 'Super Mario 64'];
 var attemptsGames = 6;
 
 function question7Function() {
 
   var gamesExplanation = alert('Alright, this is the final question (for realsies this time). On the page you\'re about to see is a list of my top ten favorite video-games of all time. Of every game on that list, there are three that I\'ve played more than any of the others, and you have to guess which ones they are. You have six attempts to guess the correct games. Good luck!');
 
-/* var question7 = prompt('Of all the games in the list below, there are three that I have played more than any of the others. If you guess one of them, you win. Type in your answer exactly like how you see it typed, and make sure to spell it correctly!\n\nThe Elder Scrolls: Oblivion\nPortal\nSuper Mario World\nBioshock\nZelda: Ocarina of Time/Zelda: Majora\'s Mask\nMega-Man X4\nHalo 3\nFinal Fantasy VII\nKingdom Hearts\nSuper Mario 64');
-db[6] = {'Your answer was ': question7} */
-
-  for (var i = 0; i < 7; i++) {
+  for (var i = 0; i < 6; i++) {
 
     var question7 = prompt('Of all the games in the list below, there are three that I have played more than any of the others. If you guess one of them, you win. Type in your answer exactly like how you see it typed, and make sure to spell it correctly!\n\nThe Elder Scrolls: Oblivion\nPortal\nSuper Mario World\nBioshock\nZelda: Ocarina of Time/Zelda: Majora\'s Mask\nMega-Man X4\nHalo 3\nFinal Fantasy VII\nKingdom Hearts\nSuper Mario 64');
-    db[6] = {'Your answer was ': question7};
+    db[6] = {'Guess my top three favorite games!': question7};
 
     while (!question7) {
       alert('I know this seems like a daunting task, believe me. But you have to type something... Type something!');
@@ -174,12 +185,20 @@ db[6] = {'Your answer was ': question7} */
       favoriteGames.splice(favoriteGames.indexOf(question7), 1);
       alert('Nice, you got one! The other correct answers were ' + favoriteGames[0] + ' and ' + favoriteGames[1] + '.');
       break;
-    // create array for other games on list, create else if condition that accounts for if user does not enter not any game listed.
+    } else if (question7 === incorrectGames[0] || question7 === incorrectGames[1] || question7 === incorrectGames[2] || question7 === incorrectGames[3] || question7 === incorrectGames[4] || question7 === incorrectGames[5] || question7 === incorrectGames[6]) {
+      attemptsGames --;
+      alert('Nope! I know, this lineup is incredible. Believe me I know they\'re all good, but three are near and dear to my heart! Guess again! The number of attempts you have left is ' + attemptsGames + '!');
     } else {
       attemptsGames --;
-      alert('Nope! I know, this lineup is incredible. Believe me I know they\'re all good, but three are near and dear to my heart!');
+      alert('Either you typed the game incorrectly or you\'re being squirrely! Try again! You have ' + attemptsGames + ' attempts left!');
     }
+  }
+
+  if (attemptsGames == 0) {
+    correctUserAnswers --;
   }
 };
 
 question7Function();
+
+alert('Congrats, you\'ve completed the guessing game! Now go take a look at some sweet CSS and HTML, and be sure to check your score!');
