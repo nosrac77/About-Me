@@ -9,6 +9,7 @@ h1 {
   font-display: block;
   text-align: center;
   font-family: 'Alex Brush';font-size: 90px;
+  text-shadow: 3px 3px 2px #39004d;
 }
 
 #opening-paragraph {
@@ -16,6 +17,8 @@ h1 {
   color: #31033B;
   text-align: center;
   margin: 20px;
+  text-shadow: 1px 1px 1px black;
+  te
 }
 
 .questions {
@@ -41,6 +44,7 @@ h1 {
   text-align: center;
   margin: 20px;
   padding: 20px;
+  text-shadow: 1px 1px 1px black;
 }
 
 #top_ten_header {
@@ -69,5 +73,53 @@ span {
 }
 
 #favorite_actors_list {
+  font-family: 'Armata';font-size: 26px;
+}
 
+#answers {
+  background: rgba(175, 175, 175, 0.5);
+  border-radius: 25px;
+  padding: 5px;
+}
+
+/* find out more button */
+.btn {
+  color: rgba(50, 51, 51, 0.52);
+  padding: 12px 17px;
+  margin-left: 39%;
+  font-family: 'OpenSansBold', sans-serif;
+  border: 3px solid rgba(50, 51, 51, 0.52);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 ##D3D3D3;
+  transition: all ease 0.7s;
+}
+
+/* The beautiful shadow on hover */
+.btn:hover {
+  box-shadow: inset 290px 0 0 0 #efefef;
+}
+
+.user_answers {
+  text-align: center;
+  font-family: 'Allerta Stencil';font-size: 25px;
+  color: #31033B;
+}
+
+#answers_header {
+  text-align: center;
+  font-family: 'Armata';font-size: 45px;
+}
+
+#user_answers_total {
+  text-align: center;
+  font-family: 'Allerta Stencil';font-size: 55px;
+  color: #31033B;
 }
