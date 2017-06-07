@@ -104,7 +104,7 @@ question4Function();
 
 function question5Function() {
 
-  var question5 = prompt('Ok ' + name + ', final question. This is it. Your life whole has lead up to this moment. You ready? Take a deep breath... ok now exhale. Look at m- LOOK AT ME. You. Can. Do this. Alright, here we go... is my name Carlton? Focus now ' + name + ', focus. Just hit me with a Y or an N.').toUpperCase();
+  var question5 = prompt('Ok ' + name + ', final question. This is it. Your whole life has lead up to this moment. You ready? Take a deep breath... ok now exhale. Look at m- LOOK AT ME. You. Can. Do this. Alright, here we go... is my name Carlton? Focus now ' + name + ', focus. Just hit me with a Y or an N.').toUpperCase();
   db[4] = {'Is my name Carlton? Correct answer N...': question5};
 
   if (question5 === 'N') {
@@ -137,6 +137,7 @@ function question6Function() {
 
     while (!question6) {
       alert('You\'re getting this because you\'re doing some falsey type nonsense. Now you better shape up ' + name + ', the lord is watching.');
+      break;
     }
 
     if (question6 < correctNumber) {
